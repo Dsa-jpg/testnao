@@ -21,8 +21,6 @@ if not api_key or not weather_api_key:
 
 client = OpenAI(api_key=api_key)
 
-
-
 # Proměnné pro ukládání časů
 processing_times = []
 delivery_times = []
@@ -107,6 +105,3 @@ def stats():
 
     return render_template('stats.html', **stats, openai_responses=openai_responses)
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
