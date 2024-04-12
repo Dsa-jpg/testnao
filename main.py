@@ -26,7 +26,9 @@ processing_times = []
 delivery_times = []
 openai_responses = []  # Ukládáme odpovědi od OpenAI API
 
-
+@app.route('/')
+def home():
+    return 'Hello World'
 
 
 @app.route('/openAI', methods=['GET', 'POST'])
@@ -105,4 +107,4 @@ def stats():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=os.environ.get('PORT', 80))
+    app.run(host='0.0.0.0', port=5000)
