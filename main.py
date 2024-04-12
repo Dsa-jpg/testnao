@@ -6,6 +6,8 @@ import requests
 import os
 from dotenv import load_dotenv
 
+app = Flask(__name__)
+
 # Načtení proměnných z .env souboru
 load_dotenv()
 
@@ -19,7 +21,7 @@ if not api_key or not weather_api_key:
 
 client = OpenAI(api_key=api_key)
 
-app = Flask(__name__)
+
 
 # Proměnné pro ukládání časů
 processing_times = []
